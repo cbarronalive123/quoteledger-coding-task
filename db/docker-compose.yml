@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16
+    container_name: codingtask-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: codingtask
+      POSTGRES_PASSWORD: codingtask
+      POSTGRES_DB: insurance
+    ports:
+      - "5433:5432"
+    volumes:
+      - codingtask_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U codingtask -d insurance"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  codingtask_pgdata:

@@ -1,0 +1,32 @@
+# Python / Django
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+*.log
+.Python
+.DS_Store
+
+# Env / secrets
+.env
+.env.local
+backend/.env
+frontend/.env.local
+
+# Node / Next
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Interview / private materials (not part of submission)
+notes/
+hackathon_docs/
+email.md
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
